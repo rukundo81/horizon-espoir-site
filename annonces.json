@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "titre": "Bienvenue sur le nouveau site d'Horizon Espoir",
+      "date": "2026-08-17",
+      "texte": "Cette section est gérée directement par l'équipe, sans avoir à toucher au code du site. Modifiez-la depuis /admin."
+    },
+    {
+      "titre": "Assemblée générale annuelle à venir",
+      "date": "2026-09-01",
+      "texte": "Les détails (date, lieu, ordre du jour) seront communiqués aux membres par courriel."
+    }
+  ]
+}

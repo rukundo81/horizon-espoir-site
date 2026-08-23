@@ -1,0 +1,28 @@
+# Configuration de Decap CMS pour Horizon Espoir
+# Documentation complète : https://decapcms.org/docs/configuration-options/
+
+backend:
+  name: git-gateway   # Nécessite Netlify Identity + Git Gateway activés sur le site
+  branch: main        # Adapter si votre branche principale a un autre nom
+
+# Les fichiers uploadés (photos, etc.) seront rangés ici
+media_folder: "content/uploads"
+public_folder: "/content/uploads"
+
+collections:
+  - name: "annonces"
+    label: "Actualités et annonces"
+    files:
+      - name: "annonces"
+        label: "Liste des annonces"
+        file: "content/annonces.json"
+        format: "json"
+        fields:
+          - label: "Annonces"
+            name: "items"          # Note: le site (index.html) lit directement un tableau —
+                                     # voir la remarque plus bas si vous gardez ce wrapper.
+            widget: "list"
+            fields:
+              - { label: "Titre", name: "titre", widget: "string" }
+              - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+              - { label: "Texte", name: "texte", widget: "text" }
